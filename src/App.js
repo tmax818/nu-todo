@@ -2,14 +2,17 @@ import React, { Component } from 'react'
 import './App.css';
 import {items} from "./shared/items"
 
+import ItemList from './components/ItemList'
+
 class App extends Component {
 
   state = {items: items}
+  
   render() {
-    console.log(this.state)
+
     return (
       <div>
-        App
+        <ItemList items={this.state.items}/>
       </div>
     )
   }
