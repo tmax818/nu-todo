@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Navbar, NavbarBrand} from 'reactstrap'
 import './App.css';
 import {items} from "./shared/items"
 
@@ -11,8 +12,13 @@ class App extends Component {
   render() {
 
     return (
-      <div>
-        <ItemList items={this.state.items}/>
+   <div className="App">
+        <Navbar dark color="danger">
+          <div className="container">
+            <NavbarBrand href="/">To-Do</NavbarBrand>
+          </div>
+        </Navbar>
+        <ItemList items={this.state.items} />
       </div>
     )
   }
